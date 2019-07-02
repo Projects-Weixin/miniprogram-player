@@ -1,0 +1,34 @@
+<!--pages/player/player.wxml-->
+<view class='pageView'>
+
+  <video style='width:{{width}}px;height:{{height}}px' wx:if="{{type == 'video'}}" id="myVideo" autoplay="true" custom-cache='{{false}}' bindplay="playerPlay" bindpause="playerPause" bindtimeupdate="playerTimeUpdate" binderror="playerError" src="{{url}}">
+  </video>
+
+  <!-- 系统播放，已停止更新 -->
+  <!-- <view class='view'>
+    <view style='width:100%'></view>
+    <audio style='margin-top:50px;width:90%;' src="{{url}}" wx:if="{{params.fileType == 'AUDIO'}}" controls="true" author="" name="{{params.title}}" id="myAudio" bindtap='playClick' bindplay="playerPlay" bindpause="playerPause" bindtimeupdate="playerTimeUpdate"
+      binderror="playerError">
+    </audio>
+  </view>
+  <view style='width:100%'></view> -->
+</view>
+
+<view class='audioView' style='width:{{width-20}}px;' bindtap='playClick' wx:if="{{type == 'audio'}}">
+  <!-- 自定义播放 -->
+  <view class='imageView'>
+    <image class='image' src="{{isPlaying ? './image/pause.png':'./image/play.png'}}">
+    </image>
+  </view>
+  <view style='width:{{width-20-90}}px'>
+    <view class='title' style='margin-top:15px;'>{{params.title}}</view>
+    <view class='timeView' style='margin-top:30px;'>
+      <view class='title'>{{currentTimeDate}}</view>
+      <view class='title totalTime'>{{totalTimeDate}}</view>
+    </view>
+  </view>
+
+  <!-- 底部消息通知弹窗 -->
+  <hfAlertView id="the-toast" bind:alertviewevent="alertvieweventListener"></hfAlertView>
+
+</view>

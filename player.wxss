@@ -1,0 +1,55 @@
+/* pages/player/player.wxss */
+
+.view {
+  width: 100%;
+  height: 80px;
+}
+
+.audioView {
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.imageView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-right: 1px solid rgba(238, 238, 238, 1);
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  margin-left: 10px;
+  font-size: 15px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 15px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.timeView {
+  display: flex;
+}
+
+.currentTime {
+  width: 50px;
+}
+
+.totalTime {
+  width:50px;
+  right: 5px;
+  position: absolute;
+}
