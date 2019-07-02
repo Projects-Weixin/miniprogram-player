@@ -11,4 +11,4 @@ plyer基于InnerAudioContext实现，可快进seek，兼容iOS、Android
 使用Video播放
 
 ## 支持npm
-
+npm i miniprogram-player
