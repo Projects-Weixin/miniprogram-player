@@ -1,8 +1,9 @@
 {
-  "name": "ls",
+  "name": "miniprogram-player",
   "version": "1.0.0",
   "description": "小程序音视频播放器",
-  "main": "player.js",
+  "main": "src/index.js",
+  "miniprogram":"src",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
